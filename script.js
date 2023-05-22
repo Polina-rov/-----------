@@ -2,8 +2,9 @@ const btn = document.querySelector('#btn');
 const price = document.querySelector('#price');
 const height = document.querySelector('#height');
 const width = document.querySelector('#width');
-  pr = 0.5;
-btn.addEventListener('click', function() {
+const form = document.querySelector('#form');
+pr = 0.5;
+function getSum() {
   if (height.value != '' && width.value != '') {
     let sum = height.value * width.value * pr;
     if (isNaN(sum)) {
@@ -12,6 +13,13 @@ btn.addEventListener('click', function() {
       price.innerHTML = sum;
     }
   } else {
-  alert('Введите высоту и ширину');
+    alert('Введите высоту и ширину');
+  }
+}
+btn.addEventListener('click', getSum);
+
+form.addEventListener('keyup', (event) => {
+  if (event.code === 'Enter') {
+    getSum();
   }
 });
