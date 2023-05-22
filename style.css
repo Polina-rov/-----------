@@ -13,7 +13,7 @@ h1 {
   body {
     font-size: 1rem;
   }
-.weight {
+.label {
     background-color: #ffc107;
     display: inline-block;
     padding: 0.25em 0.4em;
@@ -23,18 +23,6 @@ h1 {
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
-}
-.width {
-    background-color: #ffc107;
-    display: inline-block;
-    padding: 0.25em 0.4em;
-    font-size: 75%;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-   
 }
 .text-center {
     margin-top: 30px;
