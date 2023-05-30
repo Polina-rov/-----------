@@ -17,11 +17,6 @@ function getSum() {
     alert('Введите высоту и ширину');
   }
 }
-function clearInputs() {
-  if (height.value != '' && width.value != '') {
-   let variable = '0';
-  }
-}
 
 btn.addEventListener('click', getSum);
 
