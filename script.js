@@ -8,10 +8,11 @@ const cost = 0.5;
 function getSum() {
   if (height.value != '' && width.value != '') {
     let sum = height.value * width.value * cost;
+
     if (isNaN(sum)) {
       alert('Введите числовое значение');
     } else {
-      price.innerHTML = sum;
+      price.innerHTML = `$${sum}`;
     }
   } else {
     alert('Введите высоту и ширину');

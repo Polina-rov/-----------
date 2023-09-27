@@ -1,45 +1,67 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Калькулятор</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-</head>
-<body> 
-  <section>
-    <div class="container pb-5 shadow rounded">
-      <div class="row">
-        <div class="col-lg-12">
-       <h1 class="text-center page-header display-4">Калькулятор расчета стоимости штор</h1>
-      </div>
-      <div class="col-md-12">
-       <form id="form">
-        <div class="row mb-3">
-          <div class="form-group col-md-6 col-sm-6 text-center">
-            <p class="label">Высота (cм)</p>
-            <input type="text" name="calculator" class="calculator_curtains_input" id="height" required="" placeholder="180" required=""/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curtain cost calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <section>
+      <div class="card">
+        <form class="card__content" id="form">
+          <div class="card__header">
+            <h1 class="card__title">Curtain cost calculator</h1>
+            <p class="card__description">
+              You can calculate cost of manufacturing curtains for your house
+            </p>
           </div>
-          <div class="form-group col-md-6 col-sm-6 text-center">
-            <p class="label">Ширина(cм)</p>
-            <input type="text" name="calculator" id="width" class="calculator_curtains_input" placeholder="150" required=""/>
+          <div class="card__input">
+            <p class="input__text">Width</p>
+            <input
+              type="text"
+              name="calculator"
+              class="input__content"
+              id="width"
+              required=""
+              placeholder="55"
+              required=""
+            />
           </div>
-        </div>
-      <div class="col-md-2 col-12">
+          <div class="card__input_2">
+            <p class="input__text_2">Height</p>
+            <input
+              type="text"
+              name="calculator"
+              class="input__content_2"
+              id="height"
+              required=""
+              placeholder="44"
+              required=""
+            />
           </div>
-          </div>
-          <div class="text-center">
-            <input type="button" name="calculator" id="btn" class="btn btn-warning btn-lg" style="width: 600px" value="Рассчитать"/>
-            <span id="price">0.0</span> <span class="byn">BYN</span>
+          <div class="result">
+            <input
+              class="form__button"
+              type="button"
+              name="calculator"
+              id="btn"
+              class="form__button"
+              value="Calculate"
+            />
+            <span class="price" id="price">$0</span>
           </div>
         </form>
       </div>
-  </div>
-</div>
-</section>
-<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src="script.js"></script>
-</body>
+    </section>
+    <script src="script.js"></script>
+  </body>
 </html>
