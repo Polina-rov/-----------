@@ -5,6 +5,13 @@ const width = document.querySelector('#width');
 const form = document.querySelector('#form');
 const cost = 0.5;
 
+function clearInputs(height, width, price) {
+  if (height.value === '' && width.value === '');
+  {
+    price.innerHTML = '$0';
+  }
+}
+
 function getSum() {
   if (height.value != '' && width.value != '') {
     let sum = height.value * width.value * cost;
@@ -15,6 +22,7 @@ function getSum() {
       price.innerHTML = `$${sum}`;
     }
   } else {
+    clearInputs(height, width, price);
     alert('Введите высоту и ширину');
   }
 }
